@@ -79,7 +79,7 @@ resource "aws_security_group" "sg" {
 
 
 resource "aws_instance" "myinstance" {
-  for_each = toset(["red","green"])
+  for_each = var.any
   ami                         = "ami-05e8e219ac7e82eba"
   instance_type               = "t2.micro"
   associate_public_ip_address = true
@@ -87,7 +87,7 @@ resource "aws_instance" "myinstance" {
   subnet_id                   = aws_subnet.subnets[0].id
   vpc_security_group_ids      = [aws_security_group.sg.id]
   tags = {
-    name = "${each.key}"
+    name = "${each.value.name}"
   }
 }
 

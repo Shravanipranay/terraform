@@ -14,14 +14,16 @@ variable "subnet_azs" {
   type    = list(string)
   default = ["a", "b"]
 }
-variable "instance_multiple" {
+variable "any" {
   type = map(object({
-    name = list(string)
+    name = string
   }))
   default = {
-    "key" = {
-      name = [ "red","green" ]
+    "vm1" = {
+      name = [ "red" ]
     }
+   "vm2" = {
+      name = [ "green" ]
+   }
   }
-  
 }
