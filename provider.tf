@@ -11,7 +11,7 @@ provider "aws" {
   region = "eu-west-3"
 
 }
-module "aws_vpc" {
+module "aws_instance" {
   source = "./aws_vpc"
   region = "eu-west-3"
 }

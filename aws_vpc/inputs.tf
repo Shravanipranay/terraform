@@ -16,14 +16,14 @@ variable "subnet_azs" {
 }
 variable "any" {
   type = map(object({
-    name = list(string)
+    Name = string
   }))
   default = {
-    "vm1" = {
-      name = [ "red" ]
+    "red" = {
+      Name = [ "red" ]
     }
-   "vm2" = {
-      name = [ "green" ]
+   "green" = {
+      Name = [ "green" ]
    }
   }
 }

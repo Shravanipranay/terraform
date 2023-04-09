@@ -87,7 +87,7 @@ resource "aws_instance" "myinstance" {
   subnet_id                   = aws_subnet.subnets[0].id
   vpc_security_group_ids      = [aws_security_group.sg.id]
   tags = {
-    name = "${each.value.name}"
+    Name = "${each.value.Name}"
   }
 }
 
