@@ -20,10 +20,10 @@ variable "any" {
   }))
   default = {
     "red" = {
-      Name = [ "red" ]
+      Name =  "red" 
     }
    "green" = {
-      Name = [ "green" ]
+      Name = "green" 
    }
   }
 }
