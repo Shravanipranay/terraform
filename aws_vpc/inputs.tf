@@ -16,7 +16,7 @@ variable "subnet_azs" {
 }
 variable "any" {
   type = map(object({
-    name = string
+    name = list(string)
   }))
   default = {
     "vm1" = {
